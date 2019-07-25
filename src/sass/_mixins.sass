@@ -1,0 +1,77 @@
+@import ../../node_modules/breakpoint-sass/stylesheets/breakpoint
+@import ../../node_modules/bootstrap/scss/bootstrap
+
+//Cores
+$cz-menu: rgba(190,190,190,.5)
+$cz-color1: #1C7CD5
+$cz-color2: #262626
+$cz-color3: #fff
+$cz-color4: #BDD9F4
+$goog: #7bce00
+
+//Personalização do Bootstrap
+$theme-colors: ("cz-color1": $cz-color1, "cz-color2":$cz-color2, "cz-color3":$cz-color3, "cz-color4":$cz-color4, "goog":$goog)
+
+//font-weight
+$thin: 100
+$regular: 300
+$medium: 400
+$bold: 500
+
+//breakpoints
+$celular: max-width 576px
+$tablet: max-width 768px
+$desktop: max-width 1366px
+
+=transition($transition...)
+	-webkit-transition: all $transition linear
+	-o-transition: all $transition linear
+	transition: all $transition linear
+
+=filter-drop-shadow($offset-x,$offset-y,$blur-radius,$color)
+	-webkit-filter: drop-shadow($offset-x,$offset-y,$blur-radius,$color)
+	filter: drop-shadow($offset-x,$offset-y,$blur-radius,$color)
+
+=placeholderColor($holderColor,$fontSize,$fontWeight)
+	input::placeholder
+		color: $holderColor
+		font-size: $fontSize
+		font-weight: $fontWeight
+	input::-webkit-input-placeholder
+		color: $holderColor
+		font-size: $fontSize
+		font-weight: $fontWeight
+	input::-ms-input-placeholder
+		color: $holderColor
+		font-size: $fontSize
+		font-weight: $fontWeight
+	input::-ms-input-placeholder
+		color: $holderColor
+		font-size: $fontSize
+		font-weight: $fontWeight
+	textarea::placeholder
+		color: $holderColor
+		font-size: $fontSize
+		font-weight: $fontWeight
+	textarea::-webkit-input-placeholder
+		color: $holderColor
+		font-size: $fontSize
+		font-weight: $fontWeight
+	textarea::-ms-input-placeholder
+		color: $holderColor
+		font-size: $fontSize
+		font-weight: $fontWeight
+	textarea::-ms-input-placeholder
+		color: $holderColor
+		font-size: $fontSize
+		font-weight: $fontWeight
+
+=linearGradient($angulo, $cor1, $cor2, $cor3, $cor4)
+	background: linear-gradient($angulo, $cor1, $cor2, $cor3, $cor4)
+	background: -webkit-linear-gradient($angulo, $cor1, $cor2, $cor3, $cor4)
+	background: -o-linear-gradient($angulo, $cor1, $cor2, $cor3, $cor4)
+	background: linear-gradient($angulo, $cor1, $cor2, $cor3, $cor4)
+
+=animation($nome,$time,$ease,$frequencia)
+	-webkit-animation: $nome $time $ease $frequencia
+	animation: $nome $time $ease $frequencia
