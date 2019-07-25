@@ -1,0 +1,5 @@
+body { width: 100% !important; font-size: 16px !important; font-weight: 300; font-family: 'Roboto', sans-serif !important; color: #262626 !important; margin: 0 !important; padding: 0 !important; }
+
+@media (max-width: 576px) { body { font-size: 14px !important; width: 100% !important; } }
+
+footer img { width: 14.625rem !important; margin: 2.1875rem auto 1.5rem auto; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; }
