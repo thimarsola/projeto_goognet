@@ -1,0 +1,29 @@
+body { width: 100% !important; font-size: 16px !important; font-weight: 400; font-family: 'Barlow', sans-serif !important; color: #454545 !important; margin: 0 !important; padding: 0 !important; }
+
+@media (max-width: 576px) { body { font-size: 14px !important; width: 100% !important; } }
+
+header .conteudo-header { padding: 1.75rem 0; width: 100%; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: start; -ms-flex-pack: start; justify-content: flex-start; -webkit-box-align: center; -ms-flex-align: center; align-items: center; }
+
+header .conteudo-header h1 { width: 100%; margin: 0; font-size: 1rem !important; font-weight: 400; text-transform: uppercase; text-align: center; }
+
+header .conteudo-header p { width: 100%; margin: 0; padding: 0; text-transform: uppercase; font-size: 1rem; font-weight: 500; }
+
+footer { padding-bottom: 2rem; }
+
+footer img { width: 14.625rem !important; margin: 2.1875rem auto 1.5rem auto; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; }
+
+footer p { text-transform: uppercase; font-size: .875rem; font-weight: 300 !important; }
+
+main #destaque .row .col-sm-6:nth-child(1) { background-color: red; mix-blend-mode: exclusion; }
+
+main #destaque .row .col-sm-6:nth-child(2) { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; padding: 0 3.125rem; background-color: #252D3A; }
+
+main #destaque .row .col-sm-6:nth-child(2) .conteudo-destaque h2 { font-style: normal; font-size: 2.5rem; font-weight: 600; color: #fff; }
+
+main #destaque .row .col-sm-6:nth-child(2) .conteudo-destaque .categoria-destaque { display: block; margin: 1rem 0 3.125rem 0; text-transform: uppercase; font-style: normal; font-size: .85rem; font-weight: 300; color: #fff; }
+
+main #destaque .row .col-sm-6:nth-child(2) .conteudo-destaque .btn-goog { padding: .5rem 2.25rem !important; border: 1px solid #7bce00; border-radius: 3px; text-transform: uppercase; text-decoration: none; font-style: normal; font-size: 1.125rem; font-weight: 300; color: #7bce00; }
+
+main #destaque .row .col-sm-6:nth-child(2) .conteudo-destaque .btn-goog:hover { background-color: #7bce00; color: #fff; -webkit-transition: all 0.3s linear; transition: all 0.3s linear; }
+
+main #destaque .row .col-sm-6:nth-child(2) .conteudo-destaque .btn-goog i { -webkit-transform: translateY(25%); transform: translateY(25%); height: 100%; font-size: 1.5rem; }

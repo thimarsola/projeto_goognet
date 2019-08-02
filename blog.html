@@ -23,12 +23,14 @@
 	<!-- Fontawesome -->
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
 		integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+	<!-- Material Design Icons -->
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 	<!-- Style sheet -->
 	<link rel="stylesheet" href="src/css/normalize.css">
 	<link rel="stylesheet" href="src/css/animate.min.css">
 	<link rel="stylesheet" href="src/css/bootstrap.css">
 	<link rel="stylesheet" href="src/css/plugins.css">
-	<link rel="stylesheet" href="src/css/stylesheet-index.css">
+	<link rel="stylesheet" href="src/css/stylesheet-blog.css">
 	<!-- Favicon -->
 	<link rel="apple-touch-icon" sizes="57x57" href="src/assets/favicon/apple-icon-57x57.png">
 	<link rel="apple-touch-icon" sizes="60x60" href="src/assets/favicon/apple-icon-60x60.png">
@@ -55,36 +57,48 @@
 	<title>Goognet Solução Digital - Agência de Marketing no Grande ABC</title>
 	<!-- Google reCaptcha -->
 	<script src="https://www.google.com/recaptcha/api.js" async defer></script>
-	<!-- Google Tag Manager -->
-	<script>
-		(function (w, d, s, l, i) {
-			w[l] = w[l] || [];
-			w[l].push({
-				'gtm.start': new Date().getTime(),
-				event: 'gtm.js'
-			});
-			var f = d.getElementsByTagName(s)[0],
-				j = d.createElement(s),
-				dl = l != 'dataLayer' ? '&l=' + l : '';
-			j.async = true;
-			j.src =
-				'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
-			f.parentNode.insertBefore(j, f);
-		})(window, document, 'script', 'dataLayer', 'GTM-WT9XPJ9');
-	</script>
-	<!-- End Google Tag Manager -->
 </head>
 
 <body>
-	<!-- Google Tag Manager (noscript) -->
-	<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WT9XPJ9" height="0" width="0"
-			style="display:none;visibility:hidden"></iframe></noscript>
-	<!-- End Google Tag Manager (noscript) -->
-
-	<header></header>
+	<header>
+		<div class="container-fluid">
+			<nav>
+				<div class="container">
+					<div class="conteudo-header">
+						<div class="logo">
+							<img src="src/assets/logo-goognet-header.svg" alt="Logo da Agência Goognet Solução Digita"
+								class="img-fluid">
+						</div>
+						<h1>Agência de Marketing Digital</h1>
+						<div class="menu">
+							<p>menu</p>
+						</div>
+					</div>
+				</div>
+			</nav>
+		</div>
+	</header>
 	<!-- conteúdo miolo -->
 	<main>
-		
+		<section id="destaque">
+			<div class="container">
+				<div class="row">
+					<!-- imagem -->
+					<div class="col-sm-6">
+						<img src="src/assets/img-destaque-blog.jpg" alt="Imagem de destaque - Blog Goognet" class="img-fluid">
+					</div>
+					<!-- titulo -->
+					<div class="col-sm-6">
+						<div class="conteudo-destaque">
+							<h2>Porque sua empresa precisa de uma agência de Marketing Digital?</h2>
+							<a class="categoria-destaque">marketing digital</a>
+							<a class="btn-goog" href="#" role="button">ver mais <i class="material-icons">
+									keyboard_arrow_right</i></a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
 	</main>
 	<!-- Footer -->
 	<footer>

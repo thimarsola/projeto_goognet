@@ -1,0 +1,57 @@
+@import mixins
+@import body
+@import header
+@import footer
+
+main
+	#destaque
+		.row
+			.col-sm-6
+				&:nth-child(1)
+					background:
+						color: red
+					mix-blend-mode: exclusion
+				&:nth-child(2)
+					display: flex
+					align-items: center
+					padding: 0 3.125rem
+					background:
+						color: #252D3A
+					.conteudo-destaque
+						h2
+							font:
+								style: normal
+								size: 2.5rem
+								weight: $semi-bold
+							color: $gn-color3
+						.categoria-destaque
+							display: block
+							margin: 1rem 0 3.125rem 0
+							text:
+								transform: uppercase
+							font:
+								style: normal
+								size: .85rem
+								weight: $flight
+							color: $gn-color3
+						.btn-goog
+							padding: .5rem 2.25rem !important
+							border: 1px solid $gn-color1
+							border-radius: 3px
+							text:
+								transform: uppercase
+								decoration: none
+							font:
+								style: normal
+								size: 1.125rem
+								weight: $flight
+							color: $gn-color1
+							&:hover
+								background-color: $gn-color1
+								color: $gn-color3
+								+transition(.3s)
+							i
+								transform: translateY(25%) 
+								height: 100%
+								font:
+									size: 1.5rem
