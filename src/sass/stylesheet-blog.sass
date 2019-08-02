@@ -38,7 +38,7 @@ main
 					size: 2rem
 					weight: $flight
 
-	#destaque
+	#destaque-principal
 		.row
 			.col-sm-6
 				&:nth-child(1)
@@ -71,7 +71,7 @@ main
 								weight: $flight
 							color: $gn-color3
 						.btn-goog
-							padding: .5rem 2.25rem !important
+							padding: .625rem 2.25rem !important
 							border: 1px solid $gn-color1
 							border-radius: 3px
 							text:
@@ -91,3 +91,86 @@ main
 								height: 100%
 								font:
 									size: 1.5rem
+	#destaques
+		margin-top: 6.875rem
+		padding: 4.0625rem
+		background:
+			color: #F8F8F8	
+		h4
+			margin-bottom: 1.5625rem
+			font:
+				style: normal
+				size: 2.25rem
+				weight: $medium
+			color: $gn-color1
+			span
+				color: $gn-color2
+		p
+			margin-bottom: 4.625rem
+			font:
+				style: normal
+				size: 1.125rem
+				weight: $flight
+	.card
+		margin: 1rem 0
+		.card-img-top
+			height: 12.5rem
+			img
+				height: 100% !important
+				object:
+					fit: cover
+					position: center 
+		.card-body
+			height: 9.375rem
+			background:
+				color: #252D3A
+			a
+				color: $gn-color3 !important
+			h5
+				margin-bottom: 1rem
+				font:
+					style: normal
+					size: 1.25rem
+					weight: $semi-bold
+			.categoria-destaque
+				font:
+					style: normal
+					size: .85rem
+					weight: $flight
+				text:
+					transform: uppercase
+	#publicacoes
+		margin: 0
+		padding: 5.25rem 0
+		p
+			font:
+				style: normal
+				size: 2.25rem
+				weight: $medium
+			span
+				color: $gn-color1
+		.btn-center
+			margin-top: 5.3125rem
+			display: flex
+			justify-content: center
+			.btn-goog-publicacao
+				padding: .625rem 2.25rem !important
+				background: 
+					color: $gn-color1
+				border-radius: 3px
+				text:
+					transform: uppercase
+					decoration: none
+				font:
+					style: normal
+					size: 1.125rem
+					weight: $flight
+				color: $gn-color3
+				&:hover
+					background-color: #6C1075
+					+transition(.3s)
+				i
+					transform: translateY(25%) 
+					height: 100%
+					font:
+						size: 1.5rem		
