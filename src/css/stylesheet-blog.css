@@ -18,6 +18,8 @@ footer p { text-transform: uppercase; font-size: .875rem; font-weight: 300 !impo
 
 main #capa { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; margin-bottom: 3.75rem; padding: 12rem 0; background-image: url("../assets/bg_header_blog.png"); background-repeat: no-repeat; background-position: right; }
 
+@media (max-width: 768px) { main #capa { padding: 6rem 0; } }
+
 main #capa p { margin: 0; padding: 0; }
 
 main #capa p:nth-child(1) { text-transform: uppercase; font-style: normal; font-size: 1.875rem; font-weight: 300; }
@@ -28,9 +30,9 @@ main #capa p:nth-child(3) { text-transform: uppercase; font-style: normal; font-
 
 main #destaque-principal .row .col-sm-6:nth-child(1) { position: relative; padding: 0; margin: 0; }
 
-main #destaque-principal .row .col-sm-6:nth-child(1) img { width: 100% !important; }
+main #destaque-principal .row .col-sm-6:nth-child(1) img { width: 100% !important; height: 100% !important; -o-object-fit: cover; object-fit: cover; -o-object-position: center; object-position: center; }
 
-main #destaque-principal .row .col-sm-6:nth-child(2) { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; padding: 0 3.125rem; background-color: #252D3A; }
+main #destaque-principal .row .col-sm-6:nth-child(2) { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; padding: 3.125rem; background-color: #252D3A; }
 
 main #destaque-principal .row .col-sm-6:nth-child(2) .conteudo-destaque h2 { font-style: normal; font-size: 2.5rem; font-weight: 600; color: #fff; }
 
@@ -42,7 +44,7 @@ main #destaque-principal .row .col-sm-6:nth-child(2) .conteudo-destaque .btn-goo
 
 main #destaque-principal .row .col-sm-6:nth-child(2) .conteudo-destaque .btn-goog i { -webkit-transform: translateY(25%); transform: translateY(25%); height: 100%; font-size: 1.5rem; }
 
-main #destaques { margin-top: 6.875rem; padding: 4.0625rem; background-color: #F8F8F8; }
+main #destaques { margin-top: 6.875rem; padding: 4.0625rem 0; background-color: #F8F8F8; }
 
 main #destaques h4 { margin-bottom: 1.5625rem; font-style: normal; font-size: 2.25rem; font-weight: 500; color: #7bce00; }
 
