@@ -4,13 +4,49 @@
 @import footer
 
 main
+	#capa
+		display: flex
+		align-items: center
+		margin-bottom: 3.75rem
+		padding: 12rem 0
+		background:
+			image: url('../assets/bg_header_blog.png')
+			repeat: no-repeat
+			position: right
+		p
+			margin: 0
+			padding: 0
+			&:nth-child(1)
+				text:
+					transform: uppercase
+				font:
+					style: normal
+					size: 1.875rem
+					weight: $flight
+			&:nth-child(2)
+				text:
+					transform: uppercase
+				font:
+					style: normal
+					size: 3.75rem
+					weight: $semi-bold
+			&:nth-child(3)
+				text:
+					transform: uppercase
+				font:
+					style: normal
+					size: 2rem
+					weight: $flight
+
 	#destaque
 		.row
 			.col-sm-6
 				&:nth-child(1)
-					background:
-						color: red
-					mix-blend-mode: exclusion
+					position: relative
+					padding: 0
+					margin: 0
+					img
+						width: 100% !important
 				&:nth-child(2)
 					display: flex
 					align-items: center
