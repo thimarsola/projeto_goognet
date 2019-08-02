@@ -15,3 +15,83 @@ footer { padding-bottom: 2rem; }
 footer img { width: 14.625rem !important; margin: 2.1875rem auto 1.5rem auto; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; }
 
 footer p { text-transform: uppercase; font-size: .875rem; font-weight: 300 !important; }
+
+main .capa-post img { width: 100% !important; height: 28rem; -o-object-fit: cover; object-fit: cover; -o-object-position: center; object-position: center; }
+
+main #conteudo-post { padding: 5rem 0; }
+
+main #conteudo-post h1 { margin-bottom: 1.5rem; font-style: normal; font-size: 2.25rem; font-weight: 600; }
+
+main #conteudo-post p { font-style: normal; font-size: 1.125rem; font-weight: 300; text-align: justify; }
+
+main #conteudo-post img { margin: 1rem 0; width: 100%; -o-object-fit: cover; object-fit: cover; -o-object-position: center; object-position: center; }
+
+main #conteudo-post .row div:nth-child(2) aside { border-radius: 5px; padding: 1.5rem; background-color: #F8F8F8; }
+
+main #conteudo-post .row div:nth-child(2) aside h6 { font-style: normal; font-size: 1.25rem; font-weight: 600; color: #7bce00; }
+
+main #conteudo-post .row div:nth-child(2) aside ul li { margin: .5rem 0; }
+
+main #conteudo-post .row div:nth-child(2) aside ul li a { color: #454545; font-style: normal; font-size: 1rem; text-align: justify; }
+
+main #conteudo-post .row div:nth-child(2) aside .cadastro-aside p { margin: 0; padding: 0; font-style: normal; font-size: 1rem; font-weight: 300; }
+
+main #conteudo-post .row div:nth-child(2) aside .cadastro-aside .form-group { margin-top: 2rem; display: block; width: 100%; }
+
+main #conteudo-post .row div:nth-child(2) aside .cadastro-aside .form-group input { width: 100%; padding: .4rem 0; font-size: .75rem; text-align: center; text-transform: uppercase; border: 1px solid #DCDCDC; border-radius: 5px; }
+
+main #conteudo-post .row div:nth-child(2) aside .cadastro-aside .btn-goog { margin: 1.5rem auto 0 auto; display: block; padding: .625rem 3.125rem !important; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; background-color: #7bce00; border-radius: 3px; text-transform: uppercase; text-decoration: none; font-style: normal; font-size: .85rem; font-weight: 600; color: #fff; }
+
+main #conteudo-post .row div:nth-child(2) aside .cadastro-aside .btn-goog:hover { background-color: #6C1075; -webkit-transition: all 0.3s linear; transition: all 0.3s linear; }
+
+main #conteudo-post .row div:nth-child(2) aside .cadastro-aside .btn-goog i { -webkit-transform: translateY(25%); transform: translateY(25%); height: 100%; font-size: 1.5rem; }
+
+main #publicacoes-relacionadas { padding: 4.0625rem 0; background-color: #F8F8F8; }
+
+main #publicacoes-relacionadas h5 { margin-bottom: 1.5625rem; font-style: normal; font-size: 2.25rem; font-weight: 500; color: #454545; }
+
+main #publicacoes-relacionadas h5 span { color: #7bce00; }
+
+main #publicacoes-relacionadas p { margin-bottom: 4.625rem; font-style: normal; font-size: 1.125rem; font-weight: 300; }
+
+main #publicacoes-relacionadas .card { margin: 1rem 0; }
+
+main #publicacoes-relacionadas .card:hover { -webkit-transform: scale(1.05); transform: scale(1.05); -webkit-transition: all 0.2s linear; transition: all 0.2s linear; }
+
+main #publicacoes-relacionadas .card .card-img-top { height: 12.5rem; }
+
+main #publicacoes-relacionadas .card .card-img-top img { height: 100% !important; -o-object-fit: cover; object-fit: cover; -o-object-position: center; object-position: center; }
+
+main #publicacoes-relacionadas .card .card-body { margin: auto; height: 9.375rem; background-color: #252D3A; }
+
+@media (max-width: 576px) { main #publicacoes-relacionadas .card .card-body { height: 12rem; } }
+
+main #publicacoes-relacionadas .card .card-body a { color: #fff !important; }
+
+main #publicacoes-relacionadas .card .card-body h5 { margin-bottom: 1rem; font-style: normal; font-size: 1.25rem; font-weight: 600; }
+
+main #publicacoes-relacionadas .card .card-body .categoria-destaque { font-style: normal; font-size: .85rem; font-weight: 300; text-transform: uppercase; }
+
+main #lead { padding: 5rem 0; }
+
+main #lead p { margin: 0; padding: 0; font-style: normal; text-align: center; }
+
+main #lead p:nth-child(1) { font-size: 2.25rem; font-weight: 500; text-transform: uppercase; }
+
+@media (max-width: 576px) { main #lead p:nth-child(1) { font-size: 1.875rem; } }
+
+main #lead p:nth-child(2) { font-size: 1.5rem; font-weight: 400; }
+
+main #lead form { margin-top: 2.5rem; }
+
+main #lead form .form-group { display: block; padding: 0 20%; }
+
+@media (max-width: 576px) { main #lead form .form-group { padding: 0; } }
+
+main #lead form .form-group input { width: 100%; padding: .625rem; font-size: .85rem; text-align: center; text-transform: uppercase; }
+
+main #lead form .btn-goog { margin: 1.5rem auto 0 auto; display: block; padding: .625rem 3.125rem !important; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; background-color: #7bce00; border-radius: 3px; text-transform: uppercase; text-decoration: none; font-style: normal; font-size: .85rem; font-weight: 600; color: #fff; }
+
+main #lead form .btn-goog:hover { background-color: #6C1075; -webkit-transition: all 0.3s linear; transition: all 0.3s linear; }
+
+main #lead form .btn-goog i { -webkit-transform: translateY(25%); transform: translateY(25%); height: 100%; font-size: 1.5rem; }

@@ -52,6 +52,8 @@ main #destaques p { margin-bottom: 4.625rem; font-style: normal; font-size: 1.12
 
 main .card { margin: 1rem 0; }
 
+main .card:hover { -webkit-transform: scale(1.05); transform: scale(1.05); -webkit-transition: all 0.2s linear; transition: all 0.2s linear; }
+
 main .card .card-img-top { height: 12.5rem; }
 
 main .card .card-img-top img { height: 100% !important; -o-object-fit: cover; object-fit: cover; -o-object-position: center; object-position: center; }
