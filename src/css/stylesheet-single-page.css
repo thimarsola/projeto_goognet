@@ -1,0 +1,17 @@
+body { width: 100% !important; font-size: 16px !important; font-weight: 400; font-family: 'Barlow', sans-serif !important; color: #454545 !important; margin: 0 !important; padding: 0 !important; }
+
+@media (max-width: 576px) { body { font-size: 14px !important; width: 100% !important; } }
+
+header { border-bottom: 1.5px solid #DCDCDC; }
+
+header .conteudo-header { padding: 1.75rem 0; width: 100%; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: start; -ms-flex-pack: start; justify-content: flex-start; -webkit-box-align: center; -ms-flex-align: center; align-items: center; }
+
+header .conteudo-header h1 { width: 100%; margin: 0; font-size: 1rem !important; font-weight: 400; text-transform: uppercase; text-align: center; }
+
+header .conteudo-header p { width: 100%; margin: 0; padding: 0; text-transform: uppercase; font-size: 1rem; font-weight: 500; }
+
+footer { padding-bottom: 2rem; }
+
+footer img { width: 14.625rem !important; margin: 2.1875rem auto 1.5rem auto; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; }
+
+footer p { text-transform: uppercase; font-size: .875rem; font-weight: 300 !important; }
