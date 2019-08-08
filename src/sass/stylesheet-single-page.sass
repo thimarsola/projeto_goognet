@@ -1,6 +1,7 @@
 @import mixins
 @import body
 @import header
+@import menu-header
 @import footer
 
 main
@@ -13,7 +14,7 @@ main
 				position: center
 	#conteudo-post
 		padding: 5rem 0
-		h1
+		h2
 			margin-bottom: 1.5rem
 			font:
 				style: normal
@@ -35,6 +36,7 @@ main
 			div
 				&:nth-child(2)
 					aside
+						box-shadow: 0 3px 10px #cfcfcf
 						border-radius: 5px
 						padding: 1.5rem
 						background:
@@ -118,40 +120,43 @@ main
 				style: normal
 				size: 1.125rem
 				weight: $flight
-		.card
-			margin: 1rem 0
-			&:hover
-				transform: scale(1.05)
-				+transition(.2s)
-			.card-img-top
-				height: 12.5rem
-				img
-					height: 100% !important
-					object:
-						fit: cover
-						position: center 
-			.card-body
-				margin: auto
-				height: 9.375rem
-				background:
-					color: #252D3A
-				+breakpoint($celular)
-					height: 12rem
-				a
-					color: $gn-color3 !important
-				h5
-					margin-bottom: 1rem
-					font:
-						style: normal
-						size: 1.25rem
-						weight: $semi-bold
-				.categoria-destaque
-					font:
-						style: normal
-						size: .85rem
-						weight: $flight
-					text:
-						transform: uppercase
+		.col-sm-4
+			padding: 0 .5rem
+			.card
+				margin: 1rem 0
+				&:hover
+					transform: scale(1.05)
+					+transition(.2s)
+				.card-img-top
+					height: 12.5rem
+					img
+						height: 100% !important
+						object:
+							fit: cover
+							position: center 
+				.card-body
+					width: 100%
+					margin: auto
+					height: 9.375rem
+					background:
+						color: #252D3A
+					+breakpoint($celular)
+						height: 12rem
+					a
+						color: $gn-color3 !important
+					h5
+						margin-bottom: 1rem
+						font:
+							style: normal
+							size: 1.25rem
+							weight: $semi-bold
+					.categoria-destaque
+						font:
+							style: normal
+							size: .85rem
+							weight: $flight
+						text:
+							transform: uppercase
 	#lead
 		padding: 5rem 0
 		p

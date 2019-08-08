@@ -15,31 +15,45 @@ main
 			position: right
 		+breakpoint($tablet)
 			padding: 6rem 0
-		p
-			margin: 0
-			padding: 0
-			&:nth-child(1)
-				text:
-					transform: uppercase
-				font:
-					style: normal
-					size: 1.875rem
-					weight: $flight
-			&:nth-child(2)
-				text:
-					transform: uppercase
-				font:
-					style: normal
-					size: 3.75rem
-					weight: $semi-bold
-			&:nth-child(3)
-				text:
-					transform: uppercase
-				font:
-					style: normal
-					size: 2rem
-					weight: $flight
-
+		.container
+			+breakpoint($celular)
+				background:
+					color: rgba(255,255,255,.8)
+				padding: 2rem
+				box-shadow: 0px 3px 10px #333
+			p
+				margin: 0
+				padding: 0
+				&:nth-child(1)
+					text:
+						transform: uppercase
+					font:
+						style: normal
+						size: 1.875rem
+						weight: $flight
+					+breakpoint($celular)
+						font:
+							size: 1rem
+				&:nth-child(2)
+					text:
+						transform: uppercase
+					font:
+						style: normal
+						size: 3.75rem
+						weight: $semi-bold
+					+breakpoint($celular)
+						font:
+							size: 1.875rem
+				&:nth-child(3)
+					text:
+						transform: uppercase
+					font:
+						style: normal
+						size: 2rem
+						weight: $flight
+					+breakpoint($celular)
+						font:
+							size: 1rem
 	#destaque-principal
 		.row
 			.col-sm-6
@@ -102,55 +116,63 @@ main
 		padding: 4.0625rem 0
 		background:
 			color: #F8F8F8	
-		h4
-			margin-bottom: 1.5625rem
-			font:
-				style: normal
-				size: 2.25rem
-				weight: $medium
-			color: $gn-color1
-			span
-				color: $gn-color2
-		p
-			margin-bottom: 4.625rem
-			font:
-				style: normal
-				size: 1.125rem
-				weight: $flight
-	.card
-		margin: 1rem 0
-		&:hover
-			transform: scale(1.05)
-			+transition(.2s)
-		.card-img-top
-			height: 12.5rem
-			img
-				height: 100% !important
-				object:
-					fit: cover
-					position: center 
-		.card-body
-			height: 9.375rem
-			background:
-				color: #252D3A
-			a
-				color: $gn-color3 !important
-			h5
-				margin-bottom: 1rem
+		.col-sm-4
+			padding: 0 .5rem !important
+			h4
+				margin-bottom: 1.5625rem
 				font:
 					style: normal
-					size: 1.25rem
-					weight: $semi-bold
-			.categoria-destaque
+					size: 2.25rem
+					weight: $medium
+				color: $gn-color1
+				span
+					color: $gn-color2
+			p
+				margin-bottom: 4.625rem
 				font:
 					style: normal
-					size: .85rem
+					size: 1.125rem
 					weight: $flight
-				text:
-					transform: uppercase
+			.card
+				margin: 1rem 0
+				padding: 0 !important
+				&:hover
+					transform: scale(1.05)
+					+transition(.2s)
+				.card-img-top
+					height: 12.5rem !important
+					img
+						height: 100% !important
+						width: 100% !important
+						object:
+							fit: cover
+							position: center 
+				.card-body
+					min-height: 9.375rem
+					background:
+						color: #252D3A
+					a
+						color: $gn-color3 !important
+					h5
+						margin-bottom: 1rem
+						font:
+							style: normal
+							size: 1.25rem
+							weight: $semi-bold
+					+breakpoint($tablet)
+						min-height: 13rem
+					+breakpoint($celular)
+						min-height: 10rem
+					.categoria-destaque
+						font:
+							style: normal
+							size: .85rem
+							weight: $flight
+						text:
+							transform: uppercase
 	#publicacoes
 		margin: 0
-		padding: 5.25rem 0
+		padding: 5.25rem 0 !important
 		p
 			font:
 				style: normal
@@ -158,12 +180,65 @@ main
 				weight: $medium
 			span
 				color: $gn-color1
+		.col-sm-4
+			padding: 0 .5rem !important
+			h4
+				margin-bottom: 1.5625rem
+				font:
+					style: normal
+					size: 2.25rem
+					weight: $medium
+				color: $gn-color1
+				span
+					color: $gn-color2
+			p
+				margin-bottom: 4.625rem
+				font:
+					style: normal
+					size: 1.125rem
+					weight: $flight
+			.card
+				margin: 1rem 0
+				padding: 0 !important
+				&:hover
+					transform: scale(1.05)
+					+transition(.2s)
+				.card-img-top
+					height: 12.5rem !important
+					img
+						height: 100% !important
+						width: 100% !important
+						object:
+							fit: cover
+							position: center 
+				.card-body
+					min-height: 9.375rem
+					background:
+						color: #252D3A
+					a
+						color: $gn-color3 !important
+					h5
+						margin-bottom: 1rem
+						font:
+							style: normal
+							size: 1.25rem
+							weight: $semi-bold
+					+breakpoint($tablet)
+						min-height: 13rem
+					+breakpoint($celular)
+						min-height: 9rem
+
+
+
+
+
+
 		.btn-center
 			margin-top: 5.3125rem
 			display: flex
 			justify-content: center
 			.btn-goog-publicacao
-				padding: .625rem 2.25rem !important
+				padding: .625rem 2.25rem
 				background: 
 					color: $gn-color1
 				border-radius: 3px
@@ -175,11 +250,21 @@ main
 					size: 1.125rem
 					weight: $flight
 				color: $gn-color3
+				+breakpoint($celular)
+					padding: .625rem 1.5rem
+					font:
+						size: .875rem
 				&:hover
 					background-color: #6C1075
 					+transition(.3s)
 				i
+					padding: 0
+					margin: 0
 					transform: translateY(25%) 
 					height: 100%
 					font:
-						size: 1.5rem		
+						size: 1.5rem
+					+breakpoint($celular)
+						transform: translateY(20%)
+						font:
+							size: 1.25rem

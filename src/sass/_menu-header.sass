@@ -1,0 +1,115 @@
+@import mixins
+
+.menu-site
+	display: none
+
+.menu-ativo
+	display: block
+	width: 100% !important
+	height: 100% !important
+	margin: 0 !important
+	padding: 0 !important
+	position: fixed
+	top: 0
+	left: 0
+	z-index: 999
+	+linearGradient(180deg, rgba(126, 194, 66, 0.9) 0%, rgba(214, 255, 179, 0.9) 100%)
+	backdrop-filter: blur(5px)
+	.header
+		height: 100%
+		padding: 1.5rem 0
+		display: flex
+		justify-content: space-between
+		align-items: center !important
+		.menu-fechado
+			height: 100%
+			display: flex
+			align-items: center
+			cursor: pointer
+			p
+				margin-right: .625rem
+				padding: 0
+				font:
+					style: normal
+					size: 1rem
+					weight: $regular
+				text:
+					transform: uppercase
+				color: $gn-color3
+			.close-icon
+				margin: 0
+				padding: 0
+				height: 1.25rem
+				display: flex
+				flex-wrap: wrap
+				.bar1, .bar2, .bar3
+					width: 1.25rem
+					height: 3px
+					background: $gn-color3
+	.menu-list
+		margin-top: 4rem
+		+breakpoint($celular)
+			margin-top: 1rem
+		ul
+			margin: 0
+			padding: 0
+			li
+				margin-bottom: 1.625rem
+				list-style: none
+				a
+					font:
+						style: normal
+						size: 1.5rem
+						weight: $semi-bold
+					color: $gn-color3
+					text:
+						transform: uppercase
+						decoration: none
+					+breakpoint($celular)
+						font-size: 1.2rem
+					&:hover
+						color: #6C1075
+						+transition(.3s)
+				p
+					margin: 1rem 0 0 0
+					font:
+						style: normal
+						size: 1rem
+						weight: $flight
+					color: $gn-color3
+					+breakpoint($celular)
+						margin-top: 0.5rem
+						font-size: .875rem
+	.social-icons
+		margin-top: 6rem
+		display: flex
+		align-items: center
+		+breakpoint($celular)
+			margin-top: 3rem
+		p
+			font:
+				style: normal
+				size:	.9375rem
+				weight: $medium
+			text:
+				transform: uppercase
+			color: $gn-color3
+		ul
+			padding: 0
+			list-style: none
+			li
+				display: inline
+				a
+					margin: 0
+					padding: 0 .875rem
+					color: $gn-color3
+					+breakpoint($celular)
+						padding: 0 .5rem
+					i
+						font:
+							size: 2rem
+						+breakpoint($celular)
+							font-size: 1.5rem
+					&:hover
+						color: #6C1075
+						+transition(.3s)
