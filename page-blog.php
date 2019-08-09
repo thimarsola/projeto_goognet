@@ -65,19 +65,38 @@
 	<section id="destaques">
 		<div class="container">
 			<h4>Destaques<span>!</span></h4>
-			<p>Aqui vovê encontra os melhores temas de <strong>Marketing Digital</strong> para ajudar no crescimento da sua
+			<p>Aqui você encontra os melhores temas de <strong>Marketing Digital</strong> para ajudar no crescimento da sua
 				empresa.</p>
 			<div class="row">
-				<!-- Destaque 1 -->
-				<div class="col-sm-4">
-					<div class="card">
-						<img src="<?php echo get_template_directory_uri(); ?>/src/assets/img-destaque-1.jpg" class="card-img-top img-fluid" alt="Imagem de destaque do Post">
-						<div class="card-body">
-							<h5 class="card-title"><a href="#">Porque é importante um site responsivo?</a></h5>
-							<a href="#" class="categoria-destaque">Web design</a>
+				<?php
+				$args_destaques = array(
+					'post_type' => 'post',
+					'post_per_page' => 1,
+					'tag' => 'Destaque'
+				);
+				$query_destaques = new WP_Query($args_destaques);
+				?>
+				<?php
+				if ($query_destaques->have_posts()) :
+					while ($query_destaques->have_posts) : $query_destaques->have_post();
+						?>
+						<div class="col-sm-4">
+							<div class="card">
+								<?php the_post_thumbnail('post-thumbnail', array('class' => 'card-img-top img-fluid')); ?>
+								<div class="card-body">
+									<h5 class="card-title"><?php the_title(); ?></h5>
+									<?php the_category(); ?>
+								</div>
+							</div>
 						</div>
-					</div>
-				</div>
+					<?php
+					endwhile;
+				else :
+					?>
+					<p>....</p>
+				<?php endif; ?>
+					<?php endif; ?>
+				<?php wp_reset_query(); ?>
 			</div>
 		</div>
 	</section>

@@ -13,16 +13,16 @@
 					if (have_posts()) :
 						while (have_posts()) : the_post();
 							?>
-					<article>
-						<h2><?php the_title(); ?></h2>
-						<?php the_content(); ?>
-					</article>
+							<article>
+								<h2><?php the_title(); ?></h2>
+								<?php the_content(); ?>
+							</article>
 
-					<?php
+						<?php
 						endwhile;
 					else :
 						?>
-					<p>....</p>
+						<p>....</p>
 					<?php endif; ?>
 				</div>
 				<!-- Barra Lateral -->
@@ -42,28 +42,23 @@
 						<div class="posts-aside mt-5">
 							<h6>Posts Recentes</h6>
 							<div class="posts-recentes">
-								<ul>
-									<?php
-									$args_posts = array(
-										'post_type' => 'post',
-										'post_per_page' => 5,
-										'order' => 'ASC'
+								<?php
+									$args_recentes = array(
+										'post_per_page' => 5
 									);
-									$query_posts = new WP_Query($args_posts);
-									?>
-									<!-- Post 1 -->
-									<?php
-									if ($query_posts->have_posts()) :
-										while ($query_posts - have_posts()) : $query_posts->the_post();
-											?>
+									$query_recentes = new WP_Query($query_recentes);
+								?>
 
-									<li><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></li>
-									<?php
-									endwhile;
-									?>
-									<?php endif; ?>
-									<?php wp_reset_query(); ?>
-								</ul>
+								<?php
+									if($query_recentes->have_posts()):
+										while($query_recentes-> have_posts()) : $query_recentes->have_post();
+								?>
+									<?php the_title(); ?>
+								<?php
+								endwhile;
+								?>
+								<?php endif; ?>
+								<?php wp_reset_query(); ?>
 							</div>
 						</div>
 						<!-- Cadastro -->
@@ -91,29 +86,36 @@
 			<p>Aqui você encontra os melhores temas de marketing digital para ajudar no crescimento da sua empresa.</p>
 			<!-- Postagens -->
 			<div class="row">
-				<!-- Post -->
-				<div class="col-sm-4">
-					<?php if (have_posts()) :
-						while (have_posts()) : the_post();
-							?>
-					<article>
-						<div class="card">
-							<img src="<?php echo get_template_directory_uri(); ?>/src/assets/img-destaque-1.jpg"
-								class="card-img-top img-fluid" alt="Imagem de destaque do Post">
-							<div class="card-body">
-								<h5 class="card-title"><a href="#"><?php the_title(); ?></a></h5>
-								<a href="<?php the_permalink(); ?>" class="categoria-destaque"><?php the_category('|'); ?></a>
-							</div>
-						</div>
-					</article>
-					<?php
-						endwhile;
-					else :
+				<?php
+				$args_relacionados = array(
+					'post_per_page' => 3,
+				);
+				$query_relacionados = new WP_Query($args_relacionados);
+				?>
+
+				<?php
+				if ($query_relacionados->have_posts()) :
+					while ($query_relacionados->have_posts()) : $query_relacionados->the_post();
 						?>
-					<p>....</p>
-					<?php endif; ?>
-				</div>
+						<!-- Post -->
+						<div class="col-sm-4">
+							<article>
+								<div class="card">
+									<?php the_post_thumbnail('post-thumbnail', array('class' => 'img-fluid')); ?>
+									<div class="card-body">
+										<h5 class="card-title"><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h5>
+										<?php the_category('|'); ?>
+									</div>
+								</div>
+							</article>
+						</div>
+					<?php
+					endwhile;
+					?>
+				<?php endif; ?>
+				<?php wp_reset_query(); ?>
 			</div>
+		</div>
 	</section>
 	<!-- captação de lead -->
 	<section id="lead">
