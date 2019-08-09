@@ -1,3 +1,8 @@
+<?php
+/*
+	Template Name: Blog
+*/
+?>
 <?php get_header(); ?>
 <!-- conteúdo miolo -->
 <main>
@@ -11,26 +16,51 @@
 			</div>
 		</div>
 	</section>
+
 	<!-- Destaque Principal -->
 	<section id="destaque-principal">
 		<div class="container">
-			<div class="row">
-				<!-- imagem -->
-				<div class="col-sm-6">
-					<img src="<?php echo get_template_directory_uri(); ?>/src/assets/img-destaque-blog.jpg" alt="Imagem de destaque - Blog Goognet" class="img-fluid">
-				</div>
-				<!-- titulo -->
-				<div class="col-sm-6">
-					<div class="conteudo-destaque">
-						<h2>Porque sua empresa precisa de uma agência de Marketing Digital?</h2>
-						<a class="categoria-destaque">marketing digital</a>
-						<a class="btn-goog" href="#">ver mais <i class="material-icons">
-								keyboard_arrow_right</i></a>
-					</div>
-				</div>
-			</div>
+			<?php
+			$args_capa = array(
+				'post_type' => 'post',
+				'post_per_page' => 1,
+				'tag' => 'capa'
+			);
+
+			$query_capa = new WP_Query($args_capa);
+
+			?>
+			<?php
+			if ($query_capa->have_posts()) :
+				while ($query_capa->have_posts()) : $query_capa->the_post();
+					?>
+					<article>
+						<div class="row">
+							<!-- imagem -->
+							<div class="col-sm-6">
+								<?php the_post_thumbnail('post-thumbnail', array('class' => 'img-fluid')); ?>
+							</div>
+							<!-- titulo -->
+							<div class="col-sm-6">
+								<div class="conteudo-destaque">
+									<h2> <?php the_title(); ?></h2>
+									<?php the_category(); ?>
+									<a class="btn-goog" href="<?php the_permalink(); ?>">ver mais <i class="material-icons">
+											keyboard_arrow_right</i></a>
+								</div>
+							</div>
+						</div>
+					</article>
+				<?php
+				endwhile;
+			else :
+				?>
+				<p>....</p>
+			<?php endif; ?>
+			<?php wp_reset_query(); ?>
 		</div>
 	</section>
+
 	<!-- Destaques -->
 	<section id="destaques">
 		<div class="container">
@@ -48,27 +78,6 @@
 						</div>
 					</div>
 				</div>
-				<!-- Destaque 2 -->
-				<div class="col-sm-4">
-					<div class="card">
-						<img src="<?php echo get_template_directory_uri(); ?>/src/assets/img-destaque-2.jpg" class="card-img-top img-fluid" alt="Imagem de destaque do Post">
-						<div class="card-body">
-							<h5 class="card-title"><a href="#">Significado das cores no Marketing Digital</a></h5>
-							<a href="#" class="categoria-destaque">Marketing digital</a>
-						</div>
-					</div>
-				</div>
-				<!-- Destaque 3 -->
-				<div class="col-sm-4">
-					<div class="card">
-						<img src="<?php echo get_template_directory_uri(); ?>/src/assets/img-destaque-3.jpg" class="card-img-top img-fluid" alt="Imagem de destaque do Post">
-						<div class="card-body">
-							<h5 class="card-title"><a href="#">7 dicas para aumentar o engajamento do Instagram da sua empresa</a>
-							</h5>
-							<a href="#" class="categoria-destaque">Mídias sociais</a>
-						</div>
-					</div>
-				</div>
 			</div>
 		</div>
 	</section>
@@ -78,58 +87,6 @@
 			<p>Publicações recentes<span>!</span></p>
 			<!-- Postagens -->
 			<div class="row">
-				<!-- Post -->
-				<div class="col-sm-4">
-					<div class="card">
-						<img src="<?php echo get_template_directory_uri(); ?>/src/assets/img-destaque-1.jpg" class="card-img-top img-fluid" alt="Imagem de destaque do Post">
-						<div class="card-body">
-							<h5 class="card-title"><a href="#">Porque é importante um site responsivo?</a></h5>
-							<a href="#" class="categoria-destaque">Web design</a>
-						</div>
-					</div>
-				</div>
-				<!-- Post -->
-				<div class="col-sm-4">
-					<div class="card">
-						<img src="<?php echo get_template_directory_uri(); ?>/src/assets/img-destaque-2.jpg" class="card-img-top img-fluid" alt="Imagem de destaque do Post">
-						<div class="card-body">
-							<h5 class="card-title"><a href="#">Significado das cores no Marketing Digital</a></h5>
-							<a href="#" class="categoria-destaque">Marketing digital</a>
-						</div>
-					</div>
-				</div>
-				<!-- Post -->
-				<div class="col-sm-4">
-					<div class="card">
-						<img src="<?php echo get_template_directory_uri(); ?>/src/assets/img-destaque-3.jpg" class="card-img-top img-fluid" alt="Imagem de destaque do Post">
-						<div class="card-body">
-							<h5 class="card-title"><a href="#">7 dicas para aumentar o engajamento do Instagram da sua empresa</a>
-							</h5>
-							<a href="#" class="categoria-destaque">Mídias sociais</a>
-						</div>
-					</div>
-				</div>
-				<!-- Post -->
-				<div class="col-sm-4">
-					<div class="card">
-						<img src="<?php echo get_template_directory_uri(); ?>/src/assets/img-destaque-3.jpg" class="card-img-top img-fluid" alt="Imagem de destaque do Post">
-						<div class="card-body">
-							<h5 class="card-title"><a href="#">7 dicas para aumentar o engajamento do Instagram da sua empresa</a>
-							</h5>
-							<a href="#" class="categoria-destaque">Mídias sociais</a>
-						</div>
-					</div>
-				</div>
-				<!-- Post -->
-				<div class="col-sm-4">
-					<div class="card">
-						<img src="<?php echo get_template_directory_uri(); ?>/src/assets/img-destaque-2.jpg" class="card-img-top img-fluid" alt="Imagem de destaque do Post">
-						<div class="card-body">
-							<h5 class="card-title"><a href="#">Significado das cores no Marketing Digital</a></h5>
-							<a href="#" class="categoria-destaque">Marketing digital</a>
-						</div>
-					</div>
-				</div>
 				<!-- Post -->
 				<div class="col-sm-4">
 					<div class="card">

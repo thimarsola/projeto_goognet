@@ -81,16 +81,24 @@ main
 								size: 2.5rem
 								weight: $semi-bold
 							color: $gn-color3
-						.categoria-destaque
+						ul
 							display: block
 							margin: 1rem 0 3.125rem 0
+							padding: 0
 							text:
 								transform: uppercase
 							font:
 								style: normal
 								size: .85rem
 								weight: $flight
-							color: $gn-color3
+							li
+								list-style: none
+								a
+									color: $gn-color3
+									&:hover
+										color: $gn-color1
+										+transition(.3s)
+										text-decoration: none
 						.btn-goog
 							padding: .625rem 2.25rem !important
 							border: 1px solid $gn-color1
