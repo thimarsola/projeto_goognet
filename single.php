@@ -42,23 +42,25 @@
 						<div class="posts-aside mt-5">
 							<h6>Posts Recentes</h6>
 							<div class="posts-recentes">
-								<?php
+								<ul>
+									<?php
 									$args_recentes = array(
 										'post_per_page' => 5
 									);
-									$query_recentes = new WP_Query($query_recentes);
-								?>
+									$query_recentes = new WP_Query('post_type=post&posts_per_page=5');
+									?>
 
-								<?php
-									if($query_recentes->have_posts()):
-										while($query_recentes-> have_posts()) : $query_recentes->have_post();
-								?>
-									<?php the_title(); ?>
-								<?php
-								endwhile;
-								?>
-								<?php endif; ?>
-								<?php wp_reset_query(); ?>
+									<?php
+									if ($query_recentes->have_posts()) :
+										while ($query_recentes->have_posts()) : $query_recentes->the_post();
+											?>
+											<li><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></li>
+										<?php
+										endwhile;
+										?>
+									<?php endif; ?>
+									<?php wp_reset_query(); ?>
+								</ul>
 							</div>
 						</div>
 						<!-- Cadastro -->
@@ -90,7 +92,7 @@
 				$args_relacionados = array(
 					'post_per_page' => 3,
 				);
-				$query_relacionados = new WP_Query($args_relacionados);
+				$query_relacionados = new WP_Query('posts_per_page=3');
 				?>
 
 				<?php

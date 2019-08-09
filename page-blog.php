@@ -53,9 +53,7 @@
 					</article>
 				<?php
 				endwhile;
-			else :
 				?>
-				<p>....</p>
 			<?php endif; ?>
 			<?php wp_reset_query(); ?>
 		</div>
@@ -71,14 +69,14 @@
 				<?php
 				$args_destaques = array(
 					'post_type' => 'post',
-					'post_per_page' => 1,
+					'post_per_page' => 3,
 					'tag' => 'Destaque'
 				);
 				$query_destaques = new WP_Query($args_destaques);
 				?>
 				<?php
 				if ($query_destaques->have_posts()) :
-					while ($query_destaques->have_posts) : $query_destaques->have_post();
+					while ($query_destaques->have_posts) : $query_destaques->the_post();
 						?>
 						<div class="col-sm-4">
 							<div class="card">
@@ -95,7 +93,6 @@
 					?>
 					<p>....</p>
 				<?php endif; ?>
-					<?php endif; ?>
 				<?php wp_reset_query(); ?>
 			</div>
 		</div>
@@ -106,16 +103,32 @@
 			<p>Publicações recentes<span>!</span></p>
 			<!-- Postagens -->
 			<div class="row">
-				<!-- Post -->
-				<div class="col-sm-4">
-					<div class="card">
-						<img src="<?php echo get_template_directory_uri(); ?>/src/assets/img-destaque-1.jpg" class="card-img-top img-fluid" alt="Imagem de destaque do Post">
-						<div class="card-body">
-							<h5 class="card-title"><a href="#">Porque é importante um site responsivo?</a></h5>
-							<a href="#" class="categoria-destaque">Web design</a>
+				<?php
+					$args_publicacoes = array(
+						'post_per_page' => 6
+					);
+
+					$query_publicacoes = new WP_Query($args_publicacoes);
+				?>
+				<?php
+					if($query_publicacoes->have_posts()):
+						while($query_publicacoes-have_posts()): $query_publicacoes->the_post();
+				?>
+					<!-- Post -->
+					<div class="col-sm-4">
+						<div class="card">
+							<?php the_post_thumbnail('post-thumbnail', array('class' => 'card-img-top img-fluid')); ?>
+							<div class="card-body">
+								<h5 class="card-title"><?php the_title(); ?></h5>
+								<?php the_category(); ?>
+							</div>
 						</div>
 					</div>
-				</div>
+				<?php
+				endwhile;
+				?>
+				<?php endif; ?>
+				<?php wp_reset_query(); ?>
 			</div>
 			<div class="btn-center">
 				<a class="btn-goog-publicacao" href="#">veja todas as publicações <i class="material-icons">
