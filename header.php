@@ -60,7 +60,7 @@
 				<div class="container">
 					<div class="conteudo-header">
 						<div class="logo">
-							<img src="src/assets/logo-goognet-header.svg" alt="Logo da Agência Goognet Solução Digital" class="img-fluid">
+							<img src="<?php echo get_template_directory_uri(); ?>/src/assets/logo-goognet-header.svg" alt="Logo da Agência Goognet Solução Digital" class="img-fluid">
 						</div>
 						<h1>Agência de Marketing Digital</h1>
 						<div class="menu">
@@ -76,7 +76,7 @@
 				<div class="menu-site">
 					<div class="container">
 						<div class="header">
-							<img src="src/assets/logo-goognet-header-branco.svg" alt="Logo da Agência Goognet Solução Digital" class="img-fluid">
+							<img src="<?php echo get_template_directory_uri(); ?>/src/assets/logo-goognet-header-branco.svg" alt="Logo da Agência Goognet Solução Digital" class="img-fluid">
 							<div class="menu-fechado">
 								<p>Fechar</p>
 								<div class="close-icon">

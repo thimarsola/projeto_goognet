@@ -17,7 +17,7 @@
 			<div class="row">
 				<!-- imagem -->
 				<div class="col-sm-6">
-					<img src="src/assets/img-destaque-blog.jpg" alt="Imagem de destaque - Blog Goognet" class="img-fluid">
+					<img src="<?php echo get_template_directory_uri(); ?>/src/assets/img-destaque-blog.jpg" alt="Imagem de destaque - Blog Goognet" class="img-fluid">
 				</div>
 				<!-- titulo -->
 				<div class="col-sm-6">
@@ -41,7 +41,7 @@
 				<!-- Destaque 1 -->
 				<div class="col-sm-4">
 					<div class="card">
-						<img src="src/assets/img-destaque-1.jpg" class="card-img-top img-fluid" alt="Imagem de destaque do Post">
+						<img src="<?php echo get_template_directory_uri(); ?>/src/assets/img-destaque-1.jpg" class="card-img-top img-fluid" alt="Imagem de destaque do Post">
 						<div class="card-body">
 							<h5 class="card-title"><a href="#">Porque é importante um site responsivo?</a></h5>
 							<a href="#" class="categoria-destaque">Web design</a>
@@ -51,7 +51,7 @@
 				<!-- Destaque 2 -->
 				<div class="col-sm-4">
 					<div class="card">
-						<img src="src/assets/img-destaque-2.jpg" class="card-img-top img-fluid" alt="Imagem de destaque do Post">
+						<img src="<?php echo get_template_directory_uri(); ?>/src/assets/img-destaque-2.jpg" class="card-img-top img-fluid" alt="Imagem de destaque do Post">
 						<div class="card-body">
 							<h5 class="card-title"><a href="#">Significado das cores no Marketing Digital</a></h5>
 							<a href="#" class="categoria-destaque">Marketing digital</a>
@@ -61,7 +61,7 @@
 				<!-- Destaque 3 -->
 				<div class="col-sm-4">
 					<div class="card">
-						<img src="src/assets/img-destaque-3.jpg" class="card-img-top img-fluid" alt="Imagem de destaque do Post">
+						<img src="<?php echo get_template_directory_uri(); ?>/src/assets/img-destaque-3.jpg" class="card-img-top img-fluid" alt="Imagem de destaque do Post">
 						<div class="card-body">
 							<h5 class="card-title"><a href="#">7 dicas para aumentar o engajamento do Instagram da sua empresa</a>
 							</h5>
@@ -81,7 +81,7 @@
 				<!-- Post -->
 				<div class="col-sm-4">
 					<div class="card">
-						<img src="src/assets/img-destaque-1.jpg" class="card-img-top img-fluid" alt="Imagem de destaque do Post">
+						<img src="<?php echo get_template_directory_uri(); ?>/src/assets/img-destaque-1.jpg" class="card-img-top img-fluid" alt="Imagem de destaque do Post">
 						<div class="card-body">
 							<h5 class="card-title"><a href="#">Porque é importante um site responsivo?</a></h5>
 							<a href="#" class="categoria-destaque">Web design</a>
@@ -91,7 +91,7 @@
 				<!-- Post -->
 				<div class="col-sm-4">
 					<div class="card">
-						<img src="src/assets/img-destaque-2.jpg" class="card-img-top img-fluid" alt="Imagem de destaque do Post">
+						<img src="<?php echo get_template_directory_uri(); ?>/src/assets/img-destaque-2.jpg" class="card-img-top img-fluid" alt="Imagem de destaque do Post">
 						<div class="card-body">
 							<h5 class="card-title"><a href="#">Significado das cores no Marketing Digital</a></h5>
 							<a href="#" class="categoria-destaque">Marketing digital</a>
@@ -101,7 +101,7 @@
 				<!-- Post -->
 				<div class="col-sm-4">
 					<div class="card">
-						<img src="src/assets/img-destaque-3.jpg" class="card-img-top img-fluid" alt="Imagem de destaque do Post">
+						<img src="<?php echo get_template_directory_uri(); ?>/src/assets/img-destaque-3.jpg" class="card-img-top img-fluid" alt="Imagem de destaque do Post">
 						<div class="card-body">
 							<h5 class="card-title"><a href="#">7 dicas para aumentar o engajamento do Instagram da sua empresa</a>
 							</h5>
@@ -112,7 +112,7 @@
 				<!-- Post -->
 				<div class="col-sm-4">
 					<div class="card">
-						<img src="src/assets/img-destaque-3.jpg" class="card-img-top img-fluid" alt="Imagem de destaque do Post">
+						<img src="<?php echo get_template_directory_uri(); ?>/src/assets/img-destaque-3.jpg" class="card-img-top img-fluid" alt="Imagem de destaque do Post">
 						<div class="card-body">
 							<h5 class="card-title"><a href="#">7 dicas para aumentar o engajamento do Instagram da sua empresa</a>
 							</h5>
@@ -123,7 +123,7 @@
 				<!-- Post -->
 				<div class="col-sm-4">
 					<div class="card">
-						<img src="src/assets/img-destaque-2.jpg" class="card-img-top img-fluid" alt="Imagem de destaque do Post">
+						<img src="<?php echo get_template_directory_uri(); ?>/src/assets/img-destaque-2.jpg" class="card-img-top img-fluid" alt="Imagem de destaque do Post">
 						<div class="card-body">
 							<h5 class="card-title"><a href="#">Significado das cores no Marketing Digital</a></h5>
 							<a href="#" class="categoria-destaque">Marketing digital</a>
@@ -133,7 +133,7 @@
 				<!-- Post -->
 				<div class="col-sm-4">
 					<div class="card">
-						<img src="src/assets/img-destaque-1.jpg" class="card-img-top img-fluid" alt="Imagem de destaque do Post">
+						<img src="<?php echo get_template_directory_uri(); ?>/src/assets/img-destaque-1.jpg" class="card-img-top img-fluid" alt="Imagem de destaque do Post">
 						<div class="card-body">
 							<h5 class="card-title"><a href="#">Porque é importante um site responsivo?</a></h5>
 							<a href="#" class="categoria-destaque">Web design</a>

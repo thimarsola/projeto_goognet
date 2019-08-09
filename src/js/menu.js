@@ -1,9 +1,13 @@
-$('.menu').click(function () {
-	$('.menu-site').toggleClass('menu-ativo');
-	$('.conteudo-header').addClass('nav-off');
-});
+var $ = jQuery;
 
-$('.menu-site').click(function () {
-	$('.menu-site').removeClass('menu-ativo');
-	$('.conteudo-header').removeClass('nav-off');
+$(document).ready(function(){
+	$('.menu').click(function () {
+		$('.menu-site').toggleClass('menu-ativo');
+		$('.conteudo-header').addClass('nav-off');
+	});
+	
+	$('.menu-site').click(function () {
+		$('.menu-site').removeClass('menu-ativo');
+		$('.conteudo-header').removeClass('nav-off');
+	});
 });
