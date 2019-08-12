@@ -45,7 +45,7 @@
 								<ul>
 									<?php
 									$args_recentes = array(
-										'post_per_page' => 5
+										'posts_per_page' => 5
 									);
 									$query_recentes = new WP_Query('post_type=post&posts_per_page=5');
 									?>
@@ -90,9 +90,9 @@
 			<div class="row">
 				<?php
 				$args_relacionados = array(
-					'post_per_page' => 3,
+					'posts_per_page' => 3,
 				);
-				$query_relacionados = new WP_Query('posts_per_page=3');
+				$query_relacionados = new WP_Query($args_relacionados);
 				?>
 
 				<?php
