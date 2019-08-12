@@ -31,12 +31,24 @@
 						<!-- Categorias -->
 						<div class="categorias">
 							<h6>Categorias</h6>
-							<ul>
-								<li><a href="#">Marketing Digital</a></li>
-								<li><a href="#">Web Design</a></li>
-								<li><a href="#">Mídia Sociais</a></li>
-								<li><a href="#">Identidade Visual</a></li>
-							</ul>
+							<?php
+							$args_categorias = array(
+								'category_name' => 'featured',
+								'order' => 'DESC'
+							);
+
+							$query_categorias = new WP_Query($args_categorias);
+							?>
+							<?php
+							if ($query_categorias->have_posts()) :
+								while ($query_categorias->have_posts()) : $query_categorias->the_post();
+									?>
+									<a href="<?php the_permalink(); ?>"><?php the_category(); ?></a>
+								<?php
+								endwhile;
+								?>
+							<?php endif; ?>
+							<?php wp_reset_query(); ?>
 						</div>
 						<!-- Últimos post -->
 						<div class="posts-aside mt-5">
@@ -47,7 +59,7 @@
 									$args_recentes = array(
 										'posts_per_page' => 5
 									);
-									$query_recentes = new WP_Query('post_type=post&posts_per_page=5');
+									$query_recentes = new WP_Query($args_recentes);
 									?>
 
 									<?php
@@ -90,7 +102,8 @@
 			<div class="row">
 				<?php
 				$args_relacionados = array(
-					'posts_per_page' => 3,
+					'orderby' => 'rand',
+					'posts_per_page' => 3
 				);
 				$query_relacionados = new WP_Query($args_relacionados);
 				?>
