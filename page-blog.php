@@ -95,7 +95,7 @@
 			</div>
 		</div>
 	</section>
-	<!-- Post -->
+	<!-- Publicações Recentes -->
 	<section id="publicacoes">
 		<div class="container">
 			<p>Publicações recentes<span>!</span></p>

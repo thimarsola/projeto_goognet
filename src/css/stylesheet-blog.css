@@ -566,6 +566,14 @@ main #destaques .col-sm-4 .card .card-body {
 	background-color: #252D3A;
 }
 
+main #destaques .col-sm-4 .card .card-body ul {
+	padding: 0;
+}
+
+main #destaques .col-sm-4 .card .card-body ul li {
+	list-style: none;
+}
+
 main #destaques .col-sm-4 .card .card-body a {
 	color: #fff !important;
 }
@@ -662,6 +670,14 @@ main #publicacoes .col-sm-4 .card .card-img-top img {
 main #publicacoes .col-sm-4 .card .card-body {
 	min-height: 9.375rem;
 	background-color: #252D3A;
+}
+
+main #publicacoes .col-sm-4 .card .card-body ul {
+	padding: 0;
+}
+
+main #publicacoes .col-sm-4 .card .card-body ul li {
+	list-style: none;
 }
 
 main #publicacoes .col-sm-4 .card .card-body a {
