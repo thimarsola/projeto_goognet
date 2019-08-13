@@ -14,12 +14,13 @@
 	<!-- Post -->
 	<section id="publicacoes">
 		<div class="container">
-			<p>Publicações recentes<span>!</span></p>
+			<p>Identidade Visual<span>!</span></p>
 			<!-- Postagens -->
 			<div class="row">
 				<?php
 				$args_publicacoes = array(
 					'post_type' => "post",
+					'category_name' => "Identidade Visual"
 				);
 
 				$query_publicacoes = new WP_Query($args_publicacoes);
