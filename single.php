@@ -116,7 +116,7 @@
 						<div class="col-sm-4">
 							<article>
 								<div class="card">
-									<?php the_post_thumbnail('post-thumbnail', array('class' => 'img-fluid')); ?>
+									<?php the_post_thumbnail('post-thumbnail', array('class' => 'img-fluid card-img-top')); ?>
 									<div class="card-body">
 										<h5 class="card-title"><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h5>
 										<?php the_category('|'); ?>
