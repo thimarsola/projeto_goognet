@@ -60,7 +60,7 @@
 				<div class="container">
 					<div class="conteudo-header">
 						<div class="logo">
-							<img src="<?php echo get_template_directory_uri(); ?>/src/assets/logo-goognet-header.svg" alt="Logo da Agência Goognet Solução Digital" class="img-fluid">
+							<a href="http://www.goognet.com.br"><img src="<?php echo get_template_directory_uri(); ?>/src/assets/logo-goognet-header.svg" alt="Logo da Agência Goognet Solução Digital" class="img-fluid"></a>
 						</div>
 						<h1>Agência de Marketing Digital</h1>
 						<div class="menu">
@@ -87,7 +87,11 @@
 							</div>
 						</div>
 						<div class="menu-list">
-							<ul>
+							<?php wp_nav_menu(
+								array('theme_location' => 'my_main_menu')
+							);
+							?>
+							<!-- <ul>
 								<li>
 									<a href="#">Agência</a>
 									<p>Conheça um pouco mais sobre a agência</p>
@@ -104,15 +108,15 @@
 									<a href="#">Blog</a>
 									<p>Fique por dentro de todas as nossas novidades</p>
 								</li>
-							</ul>
+							</ul> -->
 						</div>
 						<div class="social-icons">
 							<p>Compartilhe:</p>
 							<ul>
-								<li><a href="#"><i class="fab fa-instagram"></i></a></li>
-								<li><a href="#"><i class="fab fa-facebook-square"></i></a></li>
-								<li><a href="#"><i class="fab fa-linkedin"></i></a></li>
-								<li><a href="#"><i class="fas fa-envelope"></i></a></li>
+								<li><a href="https://www.instagram.com/goognetsolucao/" target="_blank"><i class="fab fa-instagram"></i></a></li>
+								<li><a href="https://www.facebook.com/goognetsolucao/" target="_blank"><i class="fab fa-facebook-square"></i></a></li>
+								<li><a href="https://www.linkedin.com/company/goognet/" target="_blank"><i class="fab fa-linkedin"></i></a></li>
+								<li><a href="mailto:contato@goognet.com.br"><i class="fas fa-envelope"></i></a></li>
 							</ul>
 						</div>
 					</div>

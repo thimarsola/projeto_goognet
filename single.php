@@ -13,16 +13,16 @@
 					if (have_posts()) :
 						while (have_posts()) : the_post();
 							?>
-							<article>
-								<h2><?php the_title(); ?></h2>
-								<?php the_content(); ?>
-							</article>
+					<article>
+						<h2><?php the_title(); ?></h2>
+						<?php the_content(); ?>
+					</article>
 
-						<?php
+					<?php
 						endwhile;
 					else :
 						?>
-						<p>....</p>
+					<p>....</p>
 					<?php endif; ?>
 				</div>
 				<!-- Barra Lateral -->
@@ -31,24 +31,14 @@
 						<!-- Categorias -->
 						<div class="categorias">
 							<h6>Categorias</h6>
-							<?php
-							$args_categorias = array(
-								'category_name' => 'featured',
-								'order' => 'DESC'
-							);
-
-							$query_categorias = new WP_Query($args_categorias);
-							?>
-							<?php
-							if ($query_categorias->have_posts()) :
-								while ($query_categorias->have_posts()) : $query_categorias->the_post();
-									?>
-									<a href="<?php the_permalink(); ?>"><?php the_category(); ?></a>
+							<ul>
 								<?php
-								endwhile;
+								wp_list_categories(array(
+									'orderby' => 'name',
+									'title_li' => ''
+								));
 								?>
-							<?php endif; ?>
-							<?php wp_reset_query(); ?>
+							</ul>
 						</div>
 						<!-- Últimos post -->
 						<div class="posts-aside mt-5">
@@ -66,8 +56,8 @@
 									if ($query_recentes->have_posts()) :
 										while ($query_recentes->have_posts()) : $query_recentes->the_post();
 											?>
-											<li><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></li>
-										<?php
+									<li><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></li>
+									<?php
 										endwhile;
 										?>
 									<?php endif; ?>
@@ -112,19 +102,19 @@
 				if ($query_relacionados->have_posts()) :
 					while ($query_relacionados->have_posts()) : $query_relacionados->the_post();
 						?>
-						<!-- Post -->
-						<div class="col-sm-4">
-							<article>
-								<div class="card">
-									<?php the_post_thumbnail('post-thumbnail', array('class' => 'img-fluid card-img-top')); ?>
-									<div class="card-body">
-										<h5 class="card-title"><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h5>
-										<?php the_category('|'); ?>
-									</div>
-								</div>
-							</article>
+				<!-- Post -->
+				<div class="col-sm-4">
+					<article>
+						<div class="card">
+							<?php the_post_thumbnail('post-thumbnail', array('class' => 'img-fluid card-img-top')); ?>
+							<div class="card-body">
+								<h5 class="card-title"><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h5>
+								<?php the_category('|'); ?>
+							</div>
 						</div>
-					<?php
+					</article>
+				</div>
+				<?php
 					endwhile;
 					?>
 				<?php endif; ?>

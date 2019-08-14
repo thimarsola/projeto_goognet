@@ -17,6 +17,23 @@ function load_scripts()
 }
 add_action('wp_enqueue_scripts', 'load_scripts');
 
+// Menu
+function wpcurso_config()
+{
+	// Registrando os menus
+	register_nav_menus(
+		array(
+			'my_main_menu' => 'Menu Header',
+		)
+	);
+	// $args = array(
+	// 	'height' => 255,
+	// 	'width' => 1920,
+	// );
+	add_theme_support('custom-header');
+}
+add_action('after_setup_theme', 'wpcurso_config', 0);
+
 //Suporte a Thumbnails
 function thumbnail(){
 add_theme_support('post-thumbnails');
