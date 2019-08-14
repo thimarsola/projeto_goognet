@@ -14,7 +14,7 @@
 	<!-- Post -->
 	<section id="publicacoes">
 		<div class="container">
-			<p>Todas Publicações<span>!</span></p>
+			<p>Nossas Publicações<span>!</span></p>
 			<!-- Postagens -->
 			<div class="row">
 				<?php
